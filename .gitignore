@@ -1,0 +1,6 @@
+*.txt
+Dataset/*
+log/*
+save_model/*
+__pycache__/*
+.idead/*
