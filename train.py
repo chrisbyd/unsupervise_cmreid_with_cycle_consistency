@@ -12,38 +12,21 @@ import torchvision
 from Data import TrainDatasetDataLoader
 from models import create_model
 from data_manager import *
-from config import Config
+from configs.train_configs import TrainConfigs
 from util.visualizer import Visualizer
 
-config = Config().parser()                              #get training config
+config = TrainConfigs().parse()                              #get training config
 
-os.environ['CUDA_VISIBLE_DEVICES'] = config.gpu
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 np.random.seed(0)
 
-dataset = config.dataset
 
-if dataset == 'sysu':
-    data_path = './Dataset/SYSU-MM01/'
-    log_path = config.log_path + 'sysu_log/'
-    test_mode = [1, 2] # thermal to visible
-
-elif dataset =='regdb':
-    data_path = './Dataset/RegDB/'
-    log_path = config.log_path + 'regdb_log/'
-    test_mode = [2, 1] # visible to thermal
-
-checkpoint_path = config.model_path
-
-if not os.path.isdir(log_path):
-    os.makedirs(log_path)
-if not os.path.isdir(checkpoint_path):
-    os.makedirs(checkpoint_path)
 
 
 
 
 if __name__ == '__main__':
-    config = Config.parse()
+
     data_loader = TrainDatasetDataLoader(config=config)
     dataset_size = len(data_loader)
     print('The number of training images  = %d'%dataset_size)
@@ -59,13 +42,16 @@ if __name__ == '__main__':
         epoch_iter = 0
         visualizer.reset()
 
-        for i ,data in enumerate(dataset):
+        for i ,data in enumerate(data_loader):
             iter_start_time = time.time()
             if total_iters % config.print_freq == 0:
                 t_data = iter_start_time - iter_data_time
 
-            total_iters += 1
-            epoch_iter
+            total_iters += config.batch_size
+            epoch_iter += config.batch_size
+
+            #-debug
+
             model.set_input(data)
             model.optimize_parameters()
 

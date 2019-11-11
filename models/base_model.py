@@ -43,6 +43,12 @@ class BaseModel(ABC):
         self.image_paths = []
         self.metric = 0  # used for learning rate policy 'plateau'
 
+    def construct_dirs(self):
+        if not os.path.isdir(self.opt.checkpoints_dir):
+            os.makedirs(self.opt.log_dir)
+        if not os.path.isdir(self.save_dir):
+            os.makedirs(self.save_dir)
+
     @staticmethod
     def modify_commandline_options(parser, is_train):
         """Add new model-specific options, and rewrite default values for existing options.
@@ -137,7 +143,7 @@ class BaseModel(ABC):
         errors_ret = OrderedDict()
         for name in self.loss_names:
             if isinstance(name, str):
-                errors_ret[name] = float(getattr(self, ' ' + name))  # float(...) works for both scalar tensor and float number
+                errors_ret[name] = float(getattr(self, 'loss_' + name))  # float(...) works for both scalar tensor and float number
         return errors_ret
 
     def save_networks(self, epoch):

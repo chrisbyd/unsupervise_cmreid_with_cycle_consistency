@@ -7,6 +7,7 @@ def create_model(config):
     """
     if config.model == 'cycle_gan':
         model = CycleGANModel(config)
+        return model
 
     elif config.model == 'test':
         raise NotImplementedError("The model has not been implemented")

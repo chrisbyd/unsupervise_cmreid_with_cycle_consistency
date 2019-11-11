@@ -11,12 +11,13 @@ class TrainDatasetDataLoader():
         self.config = config
         self.get_transform()
         self.construct_dataset()
+
         print('dataset [%s] was created '%type(self.dataset).__name__)
         self.dataloader = data.DataLoader(
             self.dataset,
             batch_size=config.batch_size,
             shuffle= not config.serial_batches,
-            num_workers= config.workers
+            num_workers= int(config.num_threads)
 
         )
 
@@ -34,11 +35,11 @@ class TrainDatasetDataLoader():
 
 
     def construct_dataset(self):
-        if self.config.dataset == 'sysu':
-            data_path = '../Dataset/SYSU-MM01/'
+        if self.config.dataset_name == 'sysu':
+            data_path = './Dataset/SYSU-MM01/'
             self.dataset = SYSUDataset(data_path,transform=self.transform_train)
 
-        elif self.config.dataset == 'regdb':
+        elif self.config.dataset_name == 'regdb':
             pass
 
         else:
@@ -54,4 +55,6 @@ class TrainDatasetDataLoader():
     def __iter__(self):
         """Return a batch of data"""
         for i, data in enumerate(self.dataloader):
+            if i* self.config.batch_size >= self.config.max_dataset_size:
+                break
             yield data

@@ -22,7 +22,7 @@ class SYSUDataset():
         A = self.transform(imgA)
         B= self.transform(imgB)
 
-        return A,B
+        return {'A' :A ,'B' : B}
 
     def __len__(self):
-        return len(self.train_visible_images)
+        return len(self.train_thermal_images)
