@@ -3,5 +3,9 @@ Dataset/*
 log/*
 save_model/*
 __pycache__/*
+models/__pycache__/*
+util/__pychache__/*
+Data/__pycache__/*
+configs/__pychae__/*
 .idea/*
 logs/*

@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/models/cycle_reid_model.py" line="86" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="de527701-1443-4f49-863e-3665db79671e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_loader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/base_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/cycle_gan_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/networks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/get_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/html.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/image_pool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/util.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/visualizer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/cycle_reid_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/networks_for_reid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/base_configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/base_configs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cycle_gan_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/cycle_gan_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/networks.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/networks.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,12 +23,55 @@
     <SUITE FILE_PATH="coverage/unsupervise_cmreid_with_cycle_consistency$pre_process_sysu.coverage" NAME="pre_process_sysu Coverage Results" MODIFIED="1573395283760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Dataset" />
     <SUITE FILE_PATH="coverage/unsupervise_cmreid_with_cycle_consistency$train.coverage" NAME="train Coverage Results" MODIFIED="1573370426634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/models/cycle_gan_model.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="722">
+                    <caret line="121" lean-forward="true" selection-start-line="120" selection-end-line="200" selection-end-column="63" />
+                    <folding>
+                      <element signature="e#0#12#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/models/networks.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="380">
+                    <caret line="209" column="3" lean-forward="true" selection-start-line="209" selection-end-line="283" />
+                    <folding>
+                      <element signature="e#0#12#0" expanded="true" />
+                      <element signature="e#416#760#1" />
+                      <element signature="e#1249#2706#0" />
+                      <element signature="e#1249#1910#1" />
+                      <element signature="e#1953#2174#0" />
+                      <element signature="e#1989#2098#0" />
+                      <element signature="e#2772#3226#1" />
+                      <element signature="e#3442#4083#0" />
+                      <element signature="e#4514#5006#1" />
+                      <element signature="e#5367#6791#1" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1120157753">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -43,7 +80,7 @@
           <entry key="html" value="1" />
           <entry key="jpg" value="19" />
           <entry key="png" value="9" />
-          <entry key="py" value="57" />
+          <entry key="py" value="70" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -52,43 +89,45 @@
           <entry key="HTML" value="1" />
           <entry key="Image" value="28" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="57" />
+          <entry key="Python" value="70" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="59" />
-          <entry key="py" value="6034" />
+          <entry key="py" value="10591" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="59" />
-          <entry key="Python" value="6034" />
+          <entry key="Python" value="10591" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util/visualizer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+            <state relative-caret-position="260">
+              <caret line="199" column="56" selection-start-line="199" selection-start-column="43" selection-end-line="199" selection-end-column="56" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1573376142336" expanded="true" signature="3694:4099" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda3/envs/baseline/lib/python3.6/site-packages/visdom/__init__.py">
+        <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1486">
-              <caret line="880" column="8" selection-start-line="880" selection-start-column="8" selection-end-line="880" selection-end-column="8" />
+            <state relative-caret-position="931">
+              <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,8 +135,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/configs/base_configs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="57" column="114" selection-start-line="57" selection-start-column="114" selection-end-line="57" selection-end-column="114" />
+            <state relative-caret-position="218">
+              <caret line="31" column="66" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -105,11 +144,63 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/configs/train_configs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+            <state relative-caret-position="589">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/base_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/cycle_reid_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="56" column="46" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+                <marker date="1573876576768" expanded="true" signature="180:8224" ph="..." />
+                <marker date="1573876576768" expanded="true" signature="5830:5839" ph="..." />
+                <marker date="1573876576768" expanded="true" signature="5860:5869" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/image_pool.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="42" column="43" lean-forward="true" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/networks_for_reid.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="184" column="12" selection-start-line="184" selection-start-column="12" selection-end-line="184" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+                <element signature="e#342#686#1" />
+                <element signature="e#2724#2812#0" />
+                <element signature="e#1279#1771#1" />
+                <marker date="1573876653503" expanded="true" signature="3653:3823" ph="..." />
+                <marker date="1573876653503" expanded="true" signature="7534:7538" ph="..." />
+                <marker date="1573876653503" expanded="true" signature="7577:9163" ph="..." />
+                <marker date="1573876653503" expanded="true" signature="9202:9207" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,9 +216,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>define</find>
-      <find>define_</find>
-      <find>ImagePool</find>
       <find>self.fake</find>
       <find>G</find>
       <find>ga</find>
@@ -148,6 +236,16 @@
       <find>train</find>
       <find>identit</find>
       <find>use_</find>
+      <find>loss</find>
+      <find>no</find>
+      <find>sequen</find>
+      <find>init_fu</find>
+      <find>define_D</find>
+      <find>real_label</find>
+      <find>netD_A</find>
+      <find>Ganl</find>
+      <find>ganlos</find>
+      <find>fea</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -157,7 +255,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/models/networks.py" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/Dataset/SYSU-MM01/combine_Thermal_And_Visible.py" />
         <option value="$PROJECT_DIR$/Data/regdb_dataset.py" />
@@ -168,11 +265,14 @@
         <option value="$PROJECT_DIR$/util/visualizer.py" />
         <option value="$PROJECT_DIR$/Data/__init__.py" />
         <option value="$PROJECT_DIR$/Data/sysu_dataset.py" />
-        <option value="$PROJECT_DIR$/models/cycle_gan_model.py" />
         <option value="$PROJECT_DIR$/models/base_model.py" />
-        <option value="$PROJECT_DIR$/configs/base_configs.py" />
         <option value="$PROJECT_DIR$/train.py" />
         <option value="$PROJECT_DIR$/configs/train_configs.py" />
+        <option value="$PROJECT_DIR$/models/cycle_gan_model.py" />
+        <option value="$PROJECT_DIR$/models/networks.py" />
+        <option value="$PROJECT_DIR$/configs/base_configs.py" />
+        <option value="$PROJECT_DIR$/models/cycle_reid_model.py" />
+        <option value="$PROJECT_DIR$/models/networks_for_reid.py" />
       </list>
     </option>
   </component>
@@ -218,33 +318,7 @@
             <path>
               <item name="unsupervise_cmreid_with_cycle_consistency" type="b2602c69:ProjectViewProjectNode" />
               <item name="unsupervise_cmreid_with_cycle_consistency" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
-              <item name="cycle_trial_1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="unsupervise_cmreid_with_cycle_consistency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="unsupervise_cmreid_with_cycle_consistency" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
-              <item name="cycle_trial_1" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="unsupervise_cmreid_with_cycle_consistency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="unsupervise_cmreid_with_cycle_consistency" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
-              <item name="cycle_trial_1" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="unsupervise_cmreid_with_cycle_consistency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="unsupervise_cmreid_with_cycle_consistency" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="unsupervise_cmreid_with_cycle_consistency" type="b2602c69:ProjectViewProjectNode" />
-              <item name="unsupervise_cmreid_with_cycle_consistency" type="462c0819:PsiDirectoryNode" />
-              <item name="save_model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="unsupervise_cmreid_with_cycle_consistency" type="b2602c69:ProjectViewProjectNode" />
@@ -378,15 +452,9 @@
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.213533" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21630615" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.45195353" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32946146" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.44878563" />
@@ -394,11 +462,17 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2154171" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -431,85 +505,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/networks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="253" column="43" selection-start-line="253" selection-start-column="33" selection-end-line="253" selection-end-column="43" />
-          <folding>
-            <element signature="e#117#196#0" />
-            <element signature="e#329#367#0" />
-            <element signature="e#359#367#0" />
-            <element signature="e#416#1207#0" />
-            <element signature="e#416#760#1" />
-            <element signature="e#1249#2706#0" />
-            <element signature="e#1249#1910#1" />
-            <element signature="e#1953#2174#0" />
-            <element signature="e#1989#2098#0" />
-            <element signature="e#2772#4440#0" />
-            <element signature="e#2772#3226#1" />
-            <element signature="e#3295#4313#0" />
-            <element signature="e#3442#4083#0" />
-            <element signature="e#4225#4313#0" />
-            <element signature="e#4514#5233#0" />
-            <element signature="e#4514#5006#1" />
-            <element signature="e#5040#5164#0" />
-            <element signature="e#5367#6791#1" />
-            <element signature="e#7695#9300#1" />
-            <element signature="e#9935#10013#0" />
-            <element signature="e#10133#10298#1" />
-            <element signature="e#10388#10843#1" />
-            <element signature="e#11451#11828#1" />
-            <element signature="e#12071#12413#1" />
-            <element signature="e#12903#14927#0" />
-            <element signature="e#12903#13649#1" />
-            <element signature="e#13682#14892#0" />
-            <element signature="e#13923#14186#0" />
-            <element signature="e#18389#18913#1" />
-            <element signature="e#20174#22161#0" />
-            <element signature="e#20329#22066#0" />
-            <element signature="e#20329#20976#1" />
-            <element signature="e#22106#22161#0" />
-            <element signature="e#22210#25173#0" />
-            <element signature="e#22210#22387#1" />
-            <element signature="e#22569#24995#0" />
-            <element signature="e#22569#23226#1" />
-            <element signature="e#23874#24160#0" />
-            <element signature="e#24197#24487#0" />
-            <element signature="e#24514#24951#0" />
-            <element signature="e#25031#25173#0" />
-            <element signature="e#27169#28378#0" />
-            <element signature="e#27301#28284#0" />
-            <element signature="e#27301#27572#1" />
-            <element signature="e#27883#28239#0" />
-            <element signature="e#28324#28378#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_loader.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/regdb_dataset.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/test_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <marker date="1573134033234" expanded="true" signature="153:154" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/options/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/options/__init__.py" />
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -535,9 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding>
-            <marker date="1573375821502" expanded="true" signature="70:75" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -545,12 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="554">
           <caret line="39" column="79" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <marker date="1573392847255" expanded="true" signature="147:152" ph="..." />
-            <marker date="1573392847255" expanded="true" signature="1050:1057" ph="..." />
-            <marker date="1573392847255" expanded="true" signature="1085:1094" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -558,10 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1573108169912" expanded="true" signature="315:320" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -583,10 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="14" selection-start-column="14" selection-end-column="14" />
-          <folding>
-            <marker date="1573394131113" expanded="true" signature="109:114" ph="..." />
-            <marker date="1573394131113" expanded="true" signature="243:253" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -597,9 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1362">
           <caret line="76" column="36" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -660,33 +636,6 @@
     <entry file="file://$PROJECT_DIR$/Dataset/SYSU-MM01/cam1/0058/0014.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/cycle_gan_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-71">
-          <caret line="56" column="33" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/base_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="138" column="25" selection-start-line="138" selection-start-column="15" selection-end-line="138" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/cycle_trial_1/web/images/epoch001_rec_B.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -714,38 +663,120 @@
     <entry file="file://$PROJECT_DIR$/logs/cycle_trial_1/web/images/epoch001_fake_A.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/configs/base_configs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="57" column="114" selection-start-line="57" selection-start-column="114" selection-end-line="57" selection-end-column="114" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/envs/baseline/lib/python3.6/site-packages/visdom/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1486">
+        <state relative-caret-position="16511">
           <caret line="880" column="8" selection-start-line="880" selection-start-column="8" selection-end-line="880" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/util/visualizer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+        <state relative-caret-position="260">
+          <caret line="199" column="56" selection-start-line="199" selection-start-column="43" selection-end-line="199" selection-end-column="56" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1573376142336" expanded="true" signature="3694:4099" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/configs/train_configs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+        <state relative-caret-position="589">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/base_configs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="31" column="66" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/networks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="209" column="3" lean-forward="true" selection-start-line="209" selection-end-line="283" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#416#760#1" />
+            <element signature="e#1249#2706#0" />
+            <element signature="e#1249#1910#1" />
+            <element signature="e#1953#2174#0" />
+            <element signature="e#1989#2098#0" />
+            <element signature="e#2772#3226#1" />
+            <element signature="e#3442#4083#0" />
+            <element signature="e#4514#5006#1" />
+            <element signature="e#5367#6791#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/cycle_gan_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="121" lean-forward="true" selection-start-line="120" selection-end-line="200" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/image_pool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="42" column="43" lean-forward="true" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/base_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/cycle_reid_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="56" column="46" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <marker date="1573876576768" expanded="true" signature="180:8224" ph="..." />
+            <marker date="1573876576768" expanded="true" signature="5830:5839" ph="..." />
+            <marker date="1573876576768" expanded="true" signature="5860:5869" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/networks_for_reid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="184" column="12" selection-start-line="184" selection-start-column="12" selection-end-line="184" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#342#686#1" />
+            <element signature="e#2724#2812#0" />
+            <element signature="e#1279#1771#1" />
+            <marker date="1573876653503" expanded="true" signature="3653:3823" ph="..." />
+            <marker date="1573876653503" expanded="true" signature="7534:7538" ph="..." />
+            <marker date="1573876653503" expanded="true" signature="7577:9163" ph="..." />
+            <marker date="1573876653503" expanded="true" signature="9202:9207" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
