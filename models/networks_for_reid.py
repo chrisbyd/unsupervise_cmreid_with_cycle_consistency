@@ -88,7 +88,7 @@ def define_H(input_nc, feature_dim ,ngf, norm='batch',init_type='normal',init_ga
 
 def define_G(feature_dim, output_nc,ngf,norm='batch'):
     norm_layer = get_norm_layer(norm_type=norm)
-    net = FakeImageGeneratorNet(output_nc=output_nc,feature_dim=feature_dim,ngf=ngf,init_type='normal',norm_layer=norm_layer,init_gain=0.02)
+    net = FakeImageGeneratorNet(output_nc=output_nc,feature_dim=feature_dim,ngf=ngf,norm_layer=norm_layer)
     return init_net(net,init_type='normal',init_gain=0.02)
 
 def define_D(input_nc,ndf,norm='batch', init_type='normal', init_gain=0.02):
@@ -157,14 +157,13 @@ class GANLoss(nn.Module):
         """
         if self.gan_mode in ['lsgan', 'vanilla']:
             target_tensor = self.get_target_tensor(prediction, target_is_real)
-            print("THe prediction shape is\n")
-            print(prediction.shape)
-            print("The target tensor shape is\n")
-            print(target_tensor.shape)
+            # print("THe prediction shape is\n")
+            # print(prediction.shape)
+            # print("The target tensor shape is\n")
+            # print(target_tensor.shape)
 
             loss = self.loss(prediction, target_tensor)
-            print(loss)
-            exit()
+
         elif self.gan_mode == 'wgangp':
             if target_is_real:
                 loss = -prediction.mean()
@@ -175,14 +174,21 @@ class GANLoss(nn.Module):
 
 class HingeLoss(nn.Module):
 
-    def __init__(self,feature_A,feature_B,margin):
+    def __init__(self,margin):
         super(HingeLoss,self).__init__()
         self.margin =margin
-        self.feature_A = feature_A
-        self.feature_B = feature_B
 
-    def forward(self, input):
-        pass
+
+    def square_loss(self,feature_A,feature_B):
+        diff = feature_A -feature_B
+        dis = torch.sum(torch.mul(diff,diff),1)
+        return dis
+
+    def forward(self, feature_A,feature_B):
+        dis = self.square_loss(feature_A,feature_B)
+        hinge_loss = torch.clamp(dis,min=self.margin)
+        loss = torch.mean(hinge_loss)
+        return loss
 
 
 
@@ -217,7 +223,7 @@ class FakeImageGeneratorNet(nn.Module):
         ]
         model_2 += [
             nn.ConvTranspose2d(64,ngf,stride=2,padding=1,kernel_size=3,output_padding=1),
-            norm_layer(),
+            norm_layer(ngf),
             nn.ReLU(True)
         ]
         model_2 +=[
@@ -231,8 +237,11 @@ class FakeImageGeneratorNet(nn.Module):
 
     def forward(self, input):
         output_1 = self.model_1(input)
+
         resize = output_1.view(output_1.shape[0],self.pool_dim,9,5)
+
         fake_img = self.model_2(resize)
+
         return fake_img
 
 class  FeatureExtractionNet(nn.Module):
@@ -264,11 +273,16 @@ class  FeatureExtractionNet(nn.Module):
         FC = [nn.Linear(pool_dim,feature_dim)]
         FC += [nn.BatchNorm1d(feature_dim)]
 
-        model += FC
+        #model += FC
         self.model = nn.Sequential(*model)
+        self.fc= nn.Sequential(*FC)
 
     def forward(self, input):
         out = self.model(input)
+        out = out.view(out.size(0),out.size(1))
+
+        out = self.fc(out)
+
         return out
 
 
@@ -291,6 +305,7 @@ class BasicBlock(nn.Module):
         self.relu = nn.ReLU(inplace=True)
         self.conv2 = conv3x3(planes, planes)
         self.bn2 = norm_layer(planes)
+        self.downsample =None
         if inplanes != planes:
             self.downsample = nn.Sequential(
                 conv1x1(inplanes,planes,stride=stride),
@@ -372,4 +387,4 @@ def conv3x3(in_planes, out_planes, stride=1, groups=1, dilation=1):
 
 def conv1x1(in_planes, out_planes, stride=1):
     """1x1 convolution"""
-    return nn.Conv2d(in_planes, out_planes, kernel_size=1, stride=stride, bias=False
+    return nn.Conv2d(in_planes, out_planes, kernel_size=1, stride=stride, bias=False)

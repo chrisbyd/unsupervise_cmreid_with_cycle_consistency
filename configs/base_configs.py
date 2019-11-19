@@ -26,7 +26,7 @@ class BaseConfigs():
         parser.add_argument('--checkpoints_dir', type=str, default='./save_model/', help='models are saved here')
         parser.add_argument('--log_dir',type= str, default= './logs/' ,help ='the log dir')
         # model parameters
-        parser.add_argument('--model', type=str, default='cycle_gan', help='chooses which model to use. [cycle_gan | pix2pix | test | colorization]')
+        parser.add_argument('--model', type=str, default='cycle_gan_reid', help='chooses which model to use. [cycle_gan | pix2pix | test | colorization]')
         parser.add_argument('--input_nc', type=int, default=3, help='# of input image channels: 3 for RGB and 1 for grayscale')
         parser.add_argument('--output_nc', type=int, default=3, help='# of output image channels: 3 for RGB and 1 for grayscale')
         parser.add_argument('--feature_dim', type=int, default=512,help='the dimension of extracted features')
@@ -47,10 +47,12 @@ class BaseConfigs():
                             help='chooses which datasets to use. [sysu | regdb ]')
 
         parser.add_argument('--dataset_mode', type=str, default='unaligned', help='chooses how datasets are loaded. [unaligned | aligned | single | colorization]')
+        parser.add_argument('--sysu_mode', type=str, default='all', help='chooses how sysu is loaded |all|indoor')
+
         parser.add_argument('--direction', type=str, default='AtoB', help='AtoB or BtoA')
         parser.add_argument('--serial_batches', action='store_true', help='if true, takes images in order to make batches, otherwise takes them randomly')
         parser.add_argument('--num_threads', default=4, type=int, help='# threads for loading data')
-        parser.add_argument('--batch_size', type=int, default=4, help='input batch size')
+        parser.add_argument('--batch_size', type=int, default=16, help='input batch size')
         parser.add_argument('--load_size', type=int, default=286, help='scale images to this size')
         parser.add_argument('--crop_size', type=int, default=256, help='then crop to this size')
         parser.add_argument('--max_dataset_size', type=int, default=11909, help='Maximum number of samples allowed per dataset. If the dataset directory contains more than max_dataset_size, only a subset is loaded.')
