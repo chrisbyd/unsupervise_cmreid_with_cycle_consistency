@@ -150,7 +150,7 @@ class GANLoss(nn.Module):
 
         Parameters:
             prediction (tensor) - - tpyically the prediction output from a discriminator
-            target_is_real (bool) - - if the ground truth label is for real images or fake images
+            target_is_real (bool) - - if the ground truth label is for real images or fake imagesprediction
 
         Returns:
             the calculated loss.
@@ -271,7 +271,7 @@ class  FeatureExtractionNet(nn.Module):
 
         pool_dim = 512
         FC = [nn.Linear(pool_dim,feature_dim)]
-        FC += [nn.BatchNorm1d(feature_dim)]
+       # FC += [nn.BatchNorm1d(feature_dim)]
 
         #model += FC
         self.model = nn.Sequential(*model)

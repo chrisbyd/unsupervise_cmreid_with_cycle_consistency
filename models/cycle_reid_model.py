@@ -60,10 +60,14 @@ class CycleReidModel(BaseModel):
 
             self.hinge_loss =networks.HingeLoss(margin= config.margin).to(self.device)
             # initialize optimizers; schedulers will be automatically created by function <BaseModel.setup>.
+            # self.optimizer_G = torch.optim.Adam(itertools.chain(self.netG_A.parameters(),
+            #                                                     self.netG_B.parameters(),
+            #                                                     self.netH_A.parameters(),
+            #                                                     self.netH_B.parameters()),
+            #                                     lr=config.lr, betas=(config.beta1, 0.999))
             self.optimizer_G = torch.optim.Adam(itertools.chain(self.netG_A.parameters(),
                                                                 self.netG_B.parameters(),
-                                                                self.netH_A.parameters(),
-                                                                self.netH_B.parameters()),
+                                                                ),
                                                 lr=config.lr, betas=(config.beta1, 0.999))
             self.optimizer_D = torch.optim.Adam(itertools.chain(self.netD_A.parameters(), self.netD_B.parameters()),
                                                 lr=config.lr, betas=(config.beta1, 0.999))
@@ -200,7 +204,7 @@ class CycleReidModel(BaseModel):
         self.set_requires_grad([self.netD_A, self.netD_B], False)  # Ds require no gradients when optimizing Gs
         self.optimizer_G.zero_grad()  # set G_A and G_B's,H_A,H_B gradients to zero
         self.backward_G()  # calculate gradients for G_A and G_B
-        self.backward_H()
+        #self.backward_H()
         self.optimizer_G.step()  # update G_A and G_B's weights
 
 
